@@ -38,7 +38,7 @@ She notices that you hit the alarm and turns her way to you.
     Wife: Oh? What was it about?
     Well, we were in some mysterious planet and an explosion happened and you were there...
     Wife: Did you make it?
-    In a confused state you responded, well what about you? Don't you care for your own lively hood?
+    In a confused state you respond, well what about you? Don't you care for your own lively hood?
     Wife: Well, if it came down to a situation like that and we had no other options, I would want you to live instead of me. That's how much you mean to me.
     Oh, Amelie...
     Amelie: Want me to make you some breakfast? -> Kitchen
@@ -53,14 +53,16 @@ VAR coffee_flask = false
  * [That would be nice, but before you leave...]
     I feel exactly the same way. You're the love of my life, my best friend, and I never want to lose you. I love you, Amelie.
   ** [While Amelie gets breakfast, you get ready by taking a shower and get dressed.] -> Kitchen_Table
- * [I am okay, I am just going to get a pastry and some coffee, but before I leave...] 
+ * I am okay, I am just going to get a pastry and some coffee, but before I leave... 
     I feel exactly the same way. You're the love of my life, my best friend, and I never want to lose you. I love you, Amelie.
- ** [ You pull on your usual clothes and go to the kitchen to get the pastry and to pour some coffee into your coffee flask.] 
-    ~ coffee_flask = true 
+    Amelie: I love you too. I'll meet you at the Lab.
+ ** [ You pull on your usual clothes and go to the kitchen to get the pastry and to pour some coffee into your coffee flask.]
+        ~ coffee_flask = true
+       // {coffee_flask}
  -> The_Lab
  
  = Kitchen_Table
- 
+// {coffee_flask}
   You are refreshen and head over to the kitchen table.
   There's an aroma in the air of freshly made coffee and smoked bacon.
   You take a seat at the kitchen table.
@@ -102,18 +104,106 @@ Yes, it would change traveling commerce forever.
 However, killing Hitler wouldn't sound so bad either.
 Solomon: Correct, but we wouldn't know the effects of doing that either. Who knows? Maybe something worse than Hitler appears, nuclear fallout prehaps? We just don't know the probalities on that change to our timeline.
 Hmm...
-I wonder if this design change will work...
+I wonder if this design change will actually work.
 Solomon: Ahh! Don't go to hard on yourself! You and Amelie are the greatest scientists of this generation! If there's anyone that can pull this off it is you two! I'll be here to help!
 
-- Thanks Solomon. 
+**** Thanks Solomon. 
 
-*["Face towards Amelie"] -> Design_Change
+*****["Face towards Amelie"] -> Design_Change
 
 = Design_Change
 
 Amelie: Listen I know what you are going to ask me. I say we do it. It only makes logically sense and we can really make a difference in this world of ours. I believe it's just a couple modifications and we can get a test done by the end of today.
-* Do it.
-* Let me think about it so more.
+* Do it. -> Preparations
++ [Let me think about it some more] Let me think about it some more... 
+{{!You go outside for a run.}|{!You go outside for some fresh air.}|{!You go to your office and review your notes.} | {&There is no time to waste! I need to make a choice now.}}
+
+-> Design_Change
+
+= Preparations
+Amelie: Great!
+Solomon: This just got a whole lot interesting.
+Solomon: Let me get some coffee.
+
+* [Give coffee_flask] 
+{coffee_flask:
+     Here have mine. We need to get started as soon as possible.-> The_Incident_Sped_Up
+}
+
+Amelie: I'll start the modifications to the gates.
+
+As the team started preparations for the new design, you start to wonder if this will finally be the day that the gates stabilize themselves in order for man to travel from one destination to another at the speed of light.
+Amelie and Solomon help you get the preparations set to start the trial late in the afternoon, close to sunset. Focused, on adjusting the reactors you hear a snap behind one of the gates.
+
+Hmm... what was that?
+
+Let me go check it out.
+
+- You shuffle some wires around and find the problem. 
+    * [Fix wiring] You address the wiring and have it completed just by the sunset.
+    ** [Check systems] Systems state everything is operational and ready to go. -> The_Incident
+
+= The_Incident_Sped_Up
+    Solomon: Ahh yes, that hit the spot!
+    Solomon: Thanks for that!
+    Solomon: Oh by the way! I believe there's a way we can send a person through the teleport without any harm!
+    * Solomon shows you a blueprint of the device from his tablet.
+    Solomon: I call it "Pulse of life!"
+    * When did you find time to work on such a device?
+        ** Solomon: Well, I was doing some research on it while we were testing out the gates. I figured one day we will be sending someone in, so why not come up with a prototype?
+    * Well done Solomon.
+    * Let's talk about it another time.
+    - Yelling across the lab you call to your wife, How's the prep going Amelie? -> The_Incident
+    
+= The_Incident
+
+Amelie: I believe we are good to go! Let's begin!
+    
+    You scream to your computer, "Start recording!"
+    
+    * RECORDING
+    Solomon! Start the reactors!
+    You start to get into the trial and speak out loud so that recording can hear you, " It's year ten and we've made much progress with the time traveling gates; however, we've decided to pivot and focus on something that might be benefical for today's society and that's a teleportation device. Just imagine the many new ways we can get people across the global or even across the universe! There's a lot at play here. Let's begin."
+    
+    * Staring gate 1!
+    There's a loud shocking sound that comes out of gate 1. The lab starts to vibrate...
+    * Starting gate 2!
+    There's an even louder shocking sound that comes out of gate 2. The place starts to tremble...
+    
+    THE GATES ARE FULLY OPENED NOW!
+    
+    You look at your timer and you notice that 30s has passed... 1 minute has passed... 3 minutes has passed...
+    
+    3 MINUTES HAVE PASSED! WE CAN SHUT IT DOWN!
+    
+    SOLOMON SHUT IT DOWN!
+    
+    * ...
+    
+    Amelie: I THINK SOLOMON HAS BEEN KNOCKED OUT! I WILL GO CHECK ON HIM!
+    
+    * Amelie goes to check on Solomon.
+    
+    He is unconscious.
+    
+    Amelie: MY LOVE! YOU NEED TO SHUT IT DOWN!
+    
+    I AM TRYING TO!
+    
+    * You look at your timer and it's been five minutes.
+    
+    OH SHIT!
+    
+    Amelie: I AM GOING TO GO FOR THE EMERGENCY SHUT DOWN PROCEDURE!
+    
+    AMELIE! DON'T DO IT YOU WILL BE SUCKED IN TO THE TELPOR...
+    
+    By the time, your last words reach her... all you hear is a soft scream.
+    * AMELIE! -> Conclusion_Chapter_1
+
+= Conclusion_Chapter_1
+
+
 
 
 -> END
