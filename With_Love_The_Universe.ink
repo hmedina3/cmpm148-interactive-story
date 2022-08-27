@@ -7,9 +7,7 @@
 
 === Chapter_1 ===
 
-// * Chapter 1 -> Home
-// Debugging
- * Chapter 1 -> Chapter_2
+* Chapter 1 -> Home
 
 === Home ===
 
@@ -610,11 +608,7 @@ You go back to the bishops house and you talk to him about Jesus Christ for hour
 
    
   
-  
-  
-  
-  
- 
+
  = Third_Side_Quest_accelerated
  
  You and Michelangelo make your way to the meeting spot and meet with the bishop. They are both are speaking Italian and you listen in with {ai_name} translation's.
@@ -646,30 +640,6 @@ You go back to the bishops house and you talk to him about Jesus Christ for hour
 
  Everything is in place, we have a Jester to distract the guards, We have Michelangelo waiting for us to enter the chapel together, and we have the bishop outfit to remain anonymous throughout the whole event.
  
- 
- 
- 
- 
- 
- //= The_Artist
- 
- //= The_Bishop
- 
- //= The_Jester
-
-
-
-    
-    
-    
-    
-    
-    
- 
- 
- 
- 
-
 
 
 -> END
