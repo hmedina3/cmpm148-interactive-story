@@ -1,4 +1,5 @@
 -> With_Love_The_Universe
+// By: Hector Medina
 
 === With_Love_The_Universe===
 
@@ -1422,14 +1423,14 @@ Agent 5: I'm not sure "cough cough" I think we are under attack!
         BOOM BOOM BOOM!
         Agent 10: What happened to the lights?
         ** [Suppressed shot] Tango down.
-        *** Where's WolfGang? 
+        *** Where's Wolfgang? 
         **** {ai_name}: Scanning...
         {ai_name}: He's near Amelie!
         -> Wolfgang_confrontation
      }
       {Loud_approach:
       All scientists in the lab run in a panick
-        * Where's WolfGang? 
+        * Where's Wolfgang? 
         ** {ai_name}: Scanning...
         {ai_name}: He's near Amelie!
         -> Wolfgang_confrontation
@@ -1465,22 +1466,22 @@ Wolfgang: Take off the juggernaut suit too!
     Wolfgang: As an outstanding citizen of my own nation! I decided what the heck, let me so if we can help her back to normal and see what the hell is going on. She awakes from her beautiful unconscious state and tells me she's a scientist and that all you have been experimenting with teleportation! How neat is that!
     Wolfgang: Imagine what I could do with power of the God's like that? Just imagine...
     
-    * The Teleportation gates are still expertimental. We don't know what effects it will have in timeline or any other timeline.
-    - That's why we switched the design to just teleportation in real time.
+    * The Teleportation gates are still expertimental. We don't know what effects it will have in any given timeline.
+    - That's why we switched the design to just teleportation in real time instead.
     
     Wolfgang: No! I will not stand for that! Do you not understand the power you possess?
-    Wolfgang: You can change history! You can destroy nations! You can form new ones! You cure diseases and viruses!
+    Wolfgang: You can change history! You can destroy nations! You can form new ones! You can cure diseases and viruses!
     * Time is not for us to mess with, Wolfgang!
     - Wolfgang: Oh, but you will! For me that is. You two are staying right here and building the gates right in this timeline.
-    * Who are you? Why haven't heard of you before. You have extreme wealth.
+    * Who are you? Why haven't I heard of you before. You have extreme wealth.
     - Wolfgang: Oh you don't know who I am? Well that's a surprise. I only literally have my own country.
-     * No, the Espionage era ended in 2048 after the effects of global warming were rampant.
+     * No, the Espionage era ended in 2048 after the effects of global warming were rampant. Spies were no longer used.
      - All nations united and we ended the global warming crisis.
-     Wolfgang: Oh! Well... it looks like we now know this is a timeline from you different from yours. It's 2048 and the espionage is still going strong!
-     Wolfgang: Different countries hire me to get information from other countries so they get an upper edge on the opposing country. They call this, "The War of Information," as you know. I get paid handsomely and I am know as one of the best spies of all time! That's why I have so many enemies that try to kill.  I invest in interesting gadgets as you can tell and let's just say I perform very interesting expertiments...
+     Wolfgang: Oh! Well... it looks like we now know this is a timeline different from yours. It's 2048 and the espionage is still going strong!
+     Wolfgang: Different countries hire me to get information so they can get an upper edge on the opposing country. They call this, "The War of Information," as you know. I get paid handsomely and I am know as one of the best spies of all time! That's why I have so many enemies that try to kill me.  I invest in interesting gadgets as you can tell and let's just say I perform very interesting expertiments...
      
-     *[Look around]
-     You notice the Pulsing light is in front of the lab.
+     *["Look around"]
+     You notice the pulsing light is in front of the lab.
      - Wolfgang: What are you looking at? Look at me when I'm speaking to you.
      
      {dropped_weapon && Quiet_approach:
@@ -1520,7 +1521,7 @@ Wolfgang: Shit! You shot me! I thought we had something special here!
  *["Drop your gun"]
 - You drop your sidearm and run with Amelie towards the pulsing light.
 
-Wolfgang is cough blood and loses his sidearm.
+Wolfgang is coughing blood and loses his sidearm.
 
 Wolfgang:"cough" "cough" Where are you going?
 
@@ -1534,20 +1535,20 @@ Wolfgang:"cough" "cough" Where are you going?
 }
 
 = positive_end
- * As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+ * As you and Amelie run towards the gate. Wolfgang activates his lab's expertimental explosive.
  - Wolfgang: You see I'm not the greatest spy for a reason!
   Wolfgang: If I can't have the power of the God's no one can!
   * Amelie! Hold on to me!
   - Amelie: Okay!
   {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
   * ["Jump towards the light!"]
-  Wolfgang: Goodbye suckas!
+  - Wolfgang: Goodbye suckas!
   
   BOOM!
   
-  The flames of the explosion engulfed Wolfgang and almost catch you and Amelie.
+  The flames of the explosion engulfed Wolfgang and almost catches up to you and Amelie.
   
-  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
   
   {ai_name}: The pulse of light is at 3% and dropping!
   {ai_name}: There's nothing I can do! Sir! Amelie!
@@ -1563,7 +1564,8 @@ Wolfgang:"cough" "cough" Where are you going?
    - Hmm... for some reason, as long as you are here with me. I feel like everything is going to be okay.
    {ai_name}: The pulse of light is at 0.5%!
    
-   Hey, {ai_name} it's going to be okay...
+  * Hey, {ai_name} 
+   - it's going to be okay...
    
    {ai_name}: Sir... it was an honor.
    
@@ -1575,6 +1577,7 @@ Wolfgang:"cough" "cough" Where are you going?
             **<> 4...
             ***<> 3...
             ****<> 2...
+            *****<> 1...
         - as soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
         
         Solomon: Jesus!
@@ -1584,7 +1587,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   Solomon: Thank the God's you've made it back.
   
-  *[Hey Solomon...] Good to be back.
+  *Hey Solomon... good to be back.
   - Amelie: Is that Solomon? Hi Solomon...
   
   Solomon: You both must be exhausted! I'm calling medical aid right now hold tight!
@@ -1594,20 +1597,20 @@ Wolfgang:"cough" "cough" Where are you going?
   
 = negative_end
 
-* As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+* As you and Amelie run towards the gate. Wolfgang activates his lab's expertimental explosive.
  - Wolfgang: You see I'm not the greatest spy for a reason!
   Wolfgang: If I can't have the power of the God's no one can!
   * Amelie! Hold on to me!
   - Amelie: Okay!
   {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
   * ["Jump towards the light!"]
-  Wolfgang: Goodbye suckas!
+  - Wolfgang: Goodbye suckas!
   
   BOOM!
   
   The flames of the explosion engulfed Wolfgang and almost catch you and Amelie.
   
-  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
   
   {ai_name}: The pulse of light is at 3% and dropping!
   {ai_name}: There's nothing I can do! Sir! Amelie!
@@ -1636,20 +1639,20 @@ Wolfgang:"cough" "cough" Where are you going?
   -> END
 = neutral_end
 
- * As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+ * As you and Amelie run towards the gate. Wolfgang activates his lab's expertimental explosive.
  - Wolfgang: You see I'm not the greatest spy for a reason!
   Wolfgang: If I can't have the power of the God's no one can!
   * Amelie! Hold on to me!
   - Amelie: Okay!
   {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
   * ["Jump towards the light!"]
-  Wolfgang: Goodbye suckas!
+ - Wolfgang: Goodbye suckas!
   
   BOOM!
   
   The flames of the explosion engulfed Wolfgang and engulfing your left leg.
   
-  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
   
   {ai_name}: The pulse of light is at 3% and dropping!
   {ai_name}: There's nothing I can do! Sir! Amelie!
@@ -1684,7 +1687,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   Solomon: Thank the God's you've made it back.
   
-  *[Hey Solomon...] Good to be back.
+  *Hey Solomon... good to be back.
   - Amelie: Is that Solomon? Hi Solomon...
   
   Solomon: You both must be exhausted! I'm calling medical aid right now hold tight!
@@ -1694,7 +1697,4 @@ Wolfgang:"cough" "cough" Where are you going?
   The next day, at the medical center they ran tests on your body and it looks like you have developed cancer from jumping through all the gates without proper protection. Your remaining days are spent researching making safe material and gadgets for teleportation, so that one else has to suffer your fate. Amelie is with you all the way to your deathbed several years later.   
 
 -> END
-
-    
-    
 
