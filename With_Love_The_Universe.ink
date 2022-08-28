@@ -9,10 +9,7 @@ VAR negative_state = 0
 
 === Chapter_1 ===
 
-// * Chapter 1 -> Home
-
-// Debugg
-* Chapter 1 -> Chapter_4
+* Chapter 1 -> Home
 
 === Home ===
 
@@ -1078,7 +1075,7 @@ You hear a stinging alarm sound off at the edge of the tunnel. They know that yo
     **** Yes! That way they won't see you coming.
     ***** Lastly, I need some weaponary.
     ****** Of course, we need to save Amelie. No matter the cost.
-    - Let's revisit what we need to do here. First I need to gain access to their security systems. Afterwards, I need hijack their power system, and then I'll engage whoever is behind all this.
+    - Let's revisit what we need to do here. First I need to gain access to their security systems. Afterwards, I need to hijack their power system, and then I'll engage whoever is behind all this.
     {ai_name}: I have recorded this into my database. I will start scanning for an access point to their security systems.
     -> Side_Quest_1
 
@@ -1136,7 +1133,7 @@ You look around the office to see if you can find any information. You locate a 
       You feel a build up of energy surrounding your body. As the suit gets charged with electricity.
       The electricity releases and zaps both you and the agent!
       As there is a moment of separation. You regain your breath and attack the agent with ferocity.
-      ***[Last punch]
+      ***["Last punch"]
         You land a punch right to his head, leaving him unconscious.
       **** You didn't tell me Solomon had that installed!
        No response from {ai_name}. It must have put itself in rest mode.
@@ -1249,8 +1246,8 @@ You walk outside the security room and notice a Lab coat hanging by. You put the
     
     *"Intercom comes on"
     - ?: Well, I can see you are knocking out my agents left and right! So rude!
-    ?: Listen, you are going to end up like all the other spies that have tried to infiltrate this base of mine. Dead! HAHA.
-    ?: Don't people know by now that my base and lab are of higher elechon compared to those other spies?
+    ?: Listen, you are going to end up like all the other spies that have tried to infiltrate this base of mine... Dead! HAHA.
+    Wolfgang: Don't people know by now that my base and lab are of higher elechon compared to those other spies?
     *"Intercom shuts off"
     
     -  So that's Wolfgang.
@@ -1275,7 +1272,9 @@ You walk outside the security room and notice a Lab coat hanging by. You put the
     
 = Weapons_Lab
 
- You are in.
+ VAR Quiet_approach = false
+ VAR Loud_approach = false
+ The agent moves out of the way and you are inside the weapons cache.
 
  Woa, this isn't just a cache, it's a weapons lab!
  
@@ -1284,10 +1283,418 @@ You walk outside the security room and notice a Lab coat hanging by. You put the
  Now how do you want to proceed with this? 
  
  * [Quiet]
- 
+    This is the smart choice. He won't see what hit him.
+    ~ Quiet_approach = true
+    -> Power_supply
  * [Go Loud]
+ After all sneaking we've done in the other timelines, I get it.
+ Fast and quick aggression.
+   ~ Loud_approach = true
+   -> Power_supply
  
+ = Power_supply
+ 
+ Before arming yourself you proceed go to the basement of the base to plant the C4 on the power supply.
+ * [Plant one C4]
+ ** [Plant another C4]
+ *** [Plant one last C4]
+ - C4 armed and set.
+ -> Weapons_Lab_2
+ 
+ = Weapons_Lab_2
+ 
+ You went with
+ {Quiet_approach:
+ 
+ <> the Quiet approach.
+ 
+ That means suppresed arms only.
+ 
+ {ai_name}: They have lots of knives here I recommend you take some of those.
+ * ["Takes suppressed weapons and knives"]
+  They have some smoke screens here. I'll should take some of those.
+  ** ["Takes smoke screens"]
+  Okay, I am ready. Let's go.
+  -> Espionage_Side_Quest_3
+ 
+}
+ 
+ {Loud_approach:
+ 
+ <> the Loud approach.
+ 
+ That means you need some armor and heavy weaponary.
+ 
+ {ai_name}: I was able to scan their database and they do have a juggernaut suit. I would highly recommend that.
+ 
+ Sounds good to me. Going loud is going to bring every agent towards me.
+ * ["Equip Juggeranut suit"]
+  {ai_name} There's a state of the art machine gun here. I suggest you take that as well.
+ ** ["Equip Heavy Machine Gun"]
+    Let's let loose. Let's go. 
+    -> Espionage_Side_Quest_3
+ }
+ 
+ = Espionage_Side_Quest_3
+ 
+ You step out of the weapons lab and head towards WolfGang's lab.
+ {Quiet_approach:
+ You hide in the shadows and wait for your time to strike.
+ Two Agents blocking a door
+ 
+ *["Suppressed weapon"]  Tangos down. Quick and clean.
+  -> Quiet_approach_in_action
+ *["Throw knives"] Tangos down.
+ -> Quiet_approach_in_action
+ }
+ 
+ {Loud_approach:
+ You are immediately noticed and all agents in area head towards your position.
+ 
+ Agent 3: Tango up ahead! GET IN POSITION!
+ 
+ One of the agents notices a small ball of some kind roll towards him.
+ 
+ Agent 5: What the...
+ Agent 5: Oh shit! Grenade!
+ 
+ BOOM!
+ 
+ While they deal with that, you activate the C4 at the power supply. The power supply is destroyed and the entire base is without power except for the places that have a back-up generator. 
+ 
+ BOOM! BOOM! BOOM!
+ 
+ This is for you Amelie. I will save you...
+ {ai_name}: Ten agents marked!
+ 
+ *["Use Heavy weapon"]  You sprayed the machine gun at all the Tangos.
+  -> Load_approach_in_action
+ }
+
+= Load_approach_in_action
+  All tangos eliminated. Pushing forward.
+  
+  You enter another part of the base.
+  
+  You see a lot more agents and they all start shooting at you.
+  {ai_name}: I count about twenty! They are all marked!
+  *["Use Heavy weapon"]  You spray the machine gun from left to right until all agents are disposed of.
+  ** [You survive but your juggernaut suit took some damage]
+  
+  - {ai_name}: I think that's all of them. We should head to Wolfgang's lab.
+  -> Wolfgangs_Lab
+  
+ 
+ 
+
+= Quiet_approach_in_action
+ 
+You enter another part of the base.
+
+You see a couple of more agents.
+
+{ai_name}: I count ten tangos sir.
+
+* ["Use smoke screen"]
+
+You throw the smoke screen towards the agents. A big cloud of smoke covers them
+
+Agent 3: What the hell is going?
+
+Agent 5: I'm not sure "cough cough" I think we are under attack!
+
+*[Suppressed weapons]
+ "pew" "pew" quick and clean.
+** [Throw Remaing Knives]
+  Tangos down.
+ 
+ - The smoke clears and not a single agent is left in sight. The best part about it is that you still have anonymity.
+ -> Wolfgangs_Lab
+ 
+ 
+ 
+
+= Wolfgangs_Lab
+    Okay, WolfGang's lab. We are here.
+     {Quiet_approach:
+     
+        * [Destroy Power Supply]
+        BOOM BOOM BOOM!
+        Agent 10: What happened to the lights?
+        ** [Suppressed shot] Tango down.
+        *** Where's WolfGang? 
+        **** {ai_name}: Scanning...
+        {ai_name}: He's near Amelie!
+        -> Wolfgang_confrontation
+     }
+      {Loud_approach:
+      All scientists in the lab run in a panick
+        * Where's WolfGang? 
+        ** {ai_name}: Scanning...
+        {ai_name}: He's near Amelie!
+        -> Wolfgang_confrontation
+     }
+
+= Wolfgang_confrontation
+
+VAR dropped_weapon = false
+
+You rush to Amelie's location.
+
+All scientists have left the lab and it's just you, Amelie, and Wolfgang. The room is tense as Wolfgang has Amelie hostage.
+
+Amelie! 
+
+Amelie: My love!
+
+Wolfgang: Ahhh shut it you two!
+
+Wolfgang: I have the advantage here. Now, drop your weapon before I shot her.
+
+{Loud_approach:
+Wolfgang: Take off the juggernaut suit too!
+ "You take off the juggernaut suit."
+}
+
+    *["Drop your weapon"]
+     ~ dropped_weapon = true
+     Wolfgang: Good job!
+     You: It's going to be okay Amelie.
+    *[Why are you doing all of this?]
+    - Wolfgang: Well you see... one day I was working with my kidnapped scientists here when all of a sudden a bright light shows up right in the middle of my lab! Can you believe that? We go towards to light and guess who shows up laying on the ground? That's right! It was your wife!
+    Wolfgang: As an outstanding citizen of my own nation! I decided what the heck, let me so if we can help her back to normal and see what the hell is going on. She awakes from her beautiful unconscious state and tells me she's a scientist and that all you have been experimenting with teleportation! How neat is that!
+    Wolfgang: Imagine what I could do with power of the God's like that? Just imagine...
+    
+    * The Teleportation gates are still expertimental. We don't know what effects it will have in timeline or any other timeline.
+    - That's why we switched the design to just teleportation in real time.
+    
+    Wolfgang: No! I will not stand for that! Do you not understand the power you possess?
+    Wolfgang: You can change history! You can destroy nations! You can form new ones! You cure diseases and viruses!
+    * Time is not for us to mess with, Wolfgang!
+    - Wolfgang: Oh, but you will! For me that is. You two are staying right here and building the gates right in this timeline.
+    * Who are you? Why haven't heard of you before. You have extreme wealth.
+    - Wolfgang: Oh you don't know who I am? Well that's a surprise. I only literally have my own country.
+     * No, the Espionage era ended in 2048 after the effects of global warming were rampant.
+     - All nations united and we ended the global warming crisis.
+     Wolfgang: Oh! Well... it looks like we now know this is a timeline from you different from yours. It's 2048 and the espionage is still going strong!
+     Wolfgang: Different countries hire me to get information from other countries so they get an upper edge on the opposing country. They call this, "The War of Information," as you know. I get paid handsomely and I am know as one of the best spies of all time! That's why I have so many enemies that try to kill.  I invest in interesting gadgets as you can tell and let's just say I perform very interesting expertiments...
+     
+     *[Look around]
+     You notice the Pulsing light is in front of the lab.
+     - Wolfgang: What are you looking at? Look at me when I'm speaking to you.
+     
+     {dropped_weapon && Quiet_approach:
+     
+     *[Lie] Okay we will work for you. Just let go of her.
+     -> The_Finesse
+     
+     - else:
+     *["Shoot Wolfgang"] You shoot Wolfgang in the shoulder.
+     -> The_Sharpshooter
+     }
+= The_Finesse
+Wolfgang let's go of Amelie and returns to you.
+
+Wolfgang: Okay, great! I believe this is going to be an great partnership!
+
+ *["Drop last smokescreen"]
+- You drop the last smokescreen at your location and you Amelie run towards the pulsing light.
+
+Wolfgang: "cough" "cough" Where are you going?
+
+{
+  - postive_state >= 4:
+    -> positive_end
+  - negative_state > 4:
+   -> negative_end
+   - else:
+  -> neutral_end
+}
+
+
+= The_Sharpshooter
+Wolfgang let's go of Amelie and returns to you.
+
+Wolfgang: Shit! You shot me! I thought we had something special here!
+
+ *["Drop your gun"]
+- You drop your sidearm and run with Amelie towards the pulsing light.
+
+Wolfgang is cough blood and loses his sidearm.
+
+Wolfgang:"cough" "cough" Where are you going?
+
+{
+  - postive_state >= 4:
+    -> positive_end
+  - negative_state > 4:
+   -> negative_end
+   - else:
+  -> neutral_end
+}
+
+= positive_end
+ * As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+ - Wolfgang: You see I'm not the greatest spy for a reason!
+  Wolfgang: If I can't have the power of the God's no one can!
+  * Amelie! Hold on to me!
+  - Amelie: Okay!
+  {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
+  * ["Jump towards the light!"]
+  Wolfgang: Goodbye suckas!
+  
+  BOOM!
+  
+  The flames of the explosion engulfed Wolfgang and almost catch you and Amelie.
+  
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  
+  {ai_name}: The pulse of light is at 3% and dropping!
+  {ai_name}: There's nothing I can do! Sir! Amelie!
+  {ai_name}: Contacting all NASA and international space stations! If anyone can hear me, this is AI-X323-Niner! We need immediate assistance! Following international space law emergency procedures!
+  
+  *Amelie...
+   **Amelie: Yes, my love...
+   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+   **** Amelie: What do you mean?
+   ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
+   ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
+   
+   - Hmm... for some reason, as long as you are here with me. I feel like everything is going to be okay.
+   {ai_name}: The pulse of light is at 0.5%!
+   
+   Hey, {ai_name} it's going to be okay...
+   
+   {ai_name}: Sir... it was an honor.
+   
+   Thanks {ai_name} likewise.
+   
+   {ai_name}: The pulse of light will shut down in
+   
+            *<> 5...
+            **<> 4...
+            ***<> 3...
+            ****<> 2...
+        - as soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
+        
+        Solomon: Jesus!
+        
+         * Solomon: Is someone there!
+  - Solomon goes check the bright light that just appeared in the lab and finds you and Amelie holding on to each other and laying on the ground.
+  
+  Solomon: Thank the God's you've made it back.
+  
+  *[Hey Solomon...] Good to be back.
+  - Amelie: Is that Solomon? Hi Solomon...
+  
+  Solomon: You both must be exhausted! I'm calling medical aid right now hold tight!
+  
+  I think we will be just fine just the way we are. Let's just lay here for a little while...
+  -> END
+  
+= negative_end
+
+* As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+ - Wolfgang: You see I'm not the greatest spy for a reason!
+  Wolfgang: If I can't have the power of the God's no one can!
+  * Amelie! Hold on to me!
+  - Amelie: Okay!
+  {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
+  * ["Jump towards the light!"]
+  Wolfgang: Goodbye suckas!
+  
+  BOOM!
+  
+  The flames of the explosion engulfed Wolfgang and almost catch you and Amelie.
+  
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  
+  {ai_name}: The pulse of light is at 3% and dropping!
+  {ai_name}: There's nothing I can do! Sir! Amelie!
+  {ai_name}: Contacting all NASA and international space stations! If anyone can hear me, this is AI-X323-Niner! We need immediate assistance! Following international space law emergency procedures!
+  
+  *Amelie...
+   **Amelie: Yes, my love...
+   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+   **** Amelie: What do you mean?
+   ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
+   ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
+   
+   - Hmm... for some reason, as long as you are here with me. I feel like everything is going to be okay.
+   {ai_name}: The pulse of light is at 0.5%!
+   
+   Hey, {ai_name} it's going to be okay...
+   
+   {ai_name}: The pulse of light will shut down in
+   
+            *<> 5...
+            **<> 4...
+            ***<> 3...
+            ****<> 2...
+            *****<> 1...
+  - You and Amelie drift into the sun dying holding on to each other and extinguishing in the sun's atmosphere.
+  -> END
+= neutral_end
+
+ * As you and Amelie run towards the gate. Wolfgang activites his lab's expertimental explosive.
+ - Wolfgang: You see I'm not the greatest spy for a reason!
+  Wolfgang: If I can't have the power of the God's no one can!
+  * Amelie! Hold on to me!
+  - Amelie: Okay!
+  {ai_name}: Extending the pulse of light to Amelie! You are good for jump!
+  * ["Jump towards the light!"]
+  Wolfgang: Goodbye suckas!
+  
+  BOOM!
+  
+  The flames of the explosion engulfed Wolfgang and engulfing your left leg.
+  
+  You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relaying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
+  
+  {ai_name}: The pulse of light is at 3% and dropping!
+  {ai_name}: There's nothing I can do! Sir! Amelie!
+  {ai_name}: Contacting all NASA and international space stations! If anyone can hear me, this is AI-X323-Niner! We need immediate assistance! Following international space law emergency procedures!
+  
+  *Amelie...
+   **Amelie: Yes, my love...
+   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+   **** Amelie: What do you mean?
+   ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
+   ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
+   
+   - Hmm... for some reason, as long as you are here with me. I feel like everything is going to be okay.
+   {ai_name}: The pulse of light is at 0.5%!
+   
+   Hey, {ai_name} it's going to be okay...
+   
+   {ai_name}: Sir...
+   
+   {ai_name}: The pulse of light will shut down in
+   
+            *<> 5...
+            **<> 4...
+            ***<> 3...
+            ****<> 2...
+        - as soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
+        
+        Solomon: Jesus!
+        
+         * Solomon: Is someone there!
+  - Solomon goes check the bright light that just appeared in the lab and finds you and Amelie holding on to each other and laying on the ground.
+  
+  Solomon: Thank the God's you've made it back.
+  
+  *[Hey Solomon...] Good to be back.
+  - Amelie: Is that Solomon? Hi Solomon...
+  
+  Solomon: You both must be exhausted! I'm calling medical aid right now hold tight!
+  
+  I think we will be just fine just the way we are. Let's just lay here for a little while...
+  
+  The next day, at the medical center they ran tests on your body and it looks like you have developed cancer from jumping through all the gates without proper protection. Your remaining days are spent researching making safe material and gadgets for teleportation, so that one else has to suffer your fate. Amelie is with you all the way to your deathbed several years later.   
+
+-> END
+
     
     
 
--> END
