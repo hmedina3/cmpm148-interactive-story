@@ -98,8 +98,8 @@ VAR coffee_flask = false
 * You and your wife head over to the lab to continue the experiments from yesterday.
 A small stocky man with a lab coat and glasses approaches you.
 Small Stocky Man: Well if it isn't my favorite scientists/engineers are we ready to get started today?
-** Hey good morning Solomon, remind me what exactly are testing out today?
-*** Solomon: We will be opening the portal gates and testing how long we can keep them open for. Remember, these trials are important considering we have no deal the ramifications of this new technology.
+** Hey good morning Solomon, remind me what exactly are we testing out today?
+*** Solomon: We will be opening the portal gates and testing how long we can keep them open for. Remember, these trials are important considering we have no idea the ramifications of this new technology.
 Hmm... I see. What was our last time set?
 Solomon: I believe the latest five times recorded were, 20s, 30s, 50s, 1m 10s, and lastly 1m 30s.
 Solomon: So, the gates are staying opened more gradually.
@@ -133,8 +133,8 @@ Amelie: Great!
 Solomon: This just got a whole lot interesting.
 Solomon: Let me get some coffee.
 
-* ["Give coffee flask"] 
 {coffee_flask:
+   * ["Give coffee flask"] 
      Here have mine. We need to get started as soon as possible.
      -> The_Incident_Sped_Up
 }
