@@ -3,7 +3,7 @@
 
 === With_Love_The_Universe===
 
-VAR postive_state = 0
+VAR positive_state = 0
 VAR negative_state = 0
 
 *   [With Love, The Universe] -> Chapter_1
@@ -88,7 +88,7 @@ VAR coffee_flask = false
   I love you. Let's finish these trials. -> The_Lab  
   **[French Kiss Amelie] 
   Aren't you feeling a little excited today aha. 
-  ~ postive_state++ 
+  ~ positive_state++ 
   -> The_Lab
   
   
@@ -230,7 +230,7 @@ Amelie: I believe we are good to go! Let's begin!
  * [Resent Solomon] Forget about it! Let's just focuse on getting her back!
    ~ negative_state++
  * [Empathize with Solomon] It's going to be okay Solomon. Let's just focus on a solution to try to get her back.
-   ~ postive_state++ 
+   ~ positive_state++ 
  - Solomon: Of course, however going through the gates is suicide! I don't know of any another solution! She could have been vaporized or sent to another timeline!
  * I wiil be the one to go through the gates! It must be done!
  * You are right... But what other solution do we have?
@@ -593,7 +593,7 @@ They will await your signal.
    You see Michelangelo working on the same sculptor.
    
    * ["Give Michelangelo the funds"] You give Michelangelo the funds.
-   ~ postive_state++
+   ~ positive_state++
    ~ help_from_the_artist = true
    - Michelangelo: Grazie. Non mi piace molto uscire. Concentrarmi sul mio lavoro è ciò che mi piace fare.
    {ai_name}: Translation - Thank you. I really don't like going out that much. Focusing on my work is what I like to do.
@@ -777,7 +777,7 @@ VAR wait_turns = 0
   
   Michelangelo: Non preoccuparti. Buona fortuna, spero che troverai quello che stai cercando.
   {ai_name}: Translation - Don't worry about it. Good luck, I hope you find whatever it is you are looking for.
-    ~ postive_state++ 
+    ~ positive_state++ 
    * Michelangelo leaves you.
    ** You enter the door and spot a pulsing light at the back of the room.
    *** Touch the light?
@@ -973,7 +973,7 @@ VAR wait_turns = 0
      Oppenheimer: Who knows what will happen if you die here. I won't let that happen!
      
      * [Deal.]
-     ~ postive_state++
+     ~ positive_state++
      -> Chapter_3_True_End
      
 =  Chapter_3_True_End
@@ -1160,7 +1160,7 @@ You move on to the computers to gain access to the security systems
     {ai_name}: Using the counter measures, can cause damage to my processes.
         ** You did well {ai_name}. Thank you for saving my life.
         {ai_name}: I would do it again in a hearbeat.
-        ~ postive_state++
+        ~ positive_state++
         ~ ai_restmode = false
          ->The_Access_Point
          
@@ -1505,7 +1505,7 @@ Wolfgang: Okay, great! I believe this is going to be an great partnership!
 Wolfgang: "cough" "cough" Where are you going?
 
 {
-  - postive_state >= 4:
+  - positive_state >= 4:
     -> positive_end
   - negative_state > 4:
    -> negative_end
@@ -1527,7 +1527,7 @@ Wolfgang is coughing blood and loses his sidearm.
 Wolfgang:"cough" "cough" Where are you going?
 
 {
-  - postive_state >= 4:
+  - positive_state >= 4:
     -> positive_end
   - negative_state > 4:
    -> negative_end
