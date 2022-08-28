@@ -368,7 +368,7 @@ I got a couple of questions for you.
    {ai_name}: Based off the construction of the chapel and the era we are in, there's a famous Italian sculptor, painter, and architect around here somewhere. If we can locate him the probability of getting inside the chapel safely and more subtlety would increase to 90.9%.
    ** What's this famous Italian painters name?
         {ai_name}: That would be Michelangelo.
-    - Thanks for the information {ai_name}. He's the one carved "David" and painted the entire Sistine Chapel. I need to locate him.
+    - Thanks for the information {ai_name}. He's the one that carved "David" and painted the entire Sistine Chapel. I need to locate him.
  
  * Let me head to the tavern. Let's see what information I can gather there...
   You head to the tavern and notice that the owner calls you over to tell you something.
@@ -582,7 +582,7 @@ They will await your signal.
       
       You make your way to Agnolo Doni's residence and explain yourself to him that Michelangelo requires the extra funds to finish the Doni Tondo painting for his wife.
      
-     He agrees and gives you the reminding amount.
+     He agrees and gives you the remaining amount.
      * ["Collect the funds."]
      - The funds collected you head back to Michelangelo.
      -> Second_Side_Quest_Completed
@@ -590,7 +590,7 @@ They will await your signal.
 = Second_Side_Quest_Completed
    You arrive to Michelangelo's workshop and make your way to the back room.
    
-   You see Michelangelo working on the same sculptor.
+   You see Michelangelo working on the same sculpture.
    
    * ["Give Michelangelo the funds"] You give Michelangelo the funds.
    ~ positive_state++
@@ -829,10 +829,10 @@ VAR wait_turns = 0
        ** Makes no difference to me. Nothing is going to stop me from getting Amelie back.
        -> AI_Interaction
      -> AI_Interaction
-    * {ai_name}, What did you mean by the Pulse dropping to 50%?
+    * <>{ai_name}, What did you mean by the Pulse dropping to 50%?
      {ai_name}: Solomon was not able to test the limit of the device as efficiently. He estimates the device can last up to three times when entering a gate.
      -> AI_Interaction
-     *{ai_name}, okay let's keep pushing forward.
+     *<>{ai_name}, okay let's keep pushing forward.
      - Are there any high energy sources nearby?
      
  {ai_name}: Yes, there is exactly one inside this laboratory building in front of you.
@@ -978,7 +978,7 @@ VAR wait_turns = 0
      
 =  Chapter_3_True_End
 
-Oppenheimer closes off the lab and works on the machine for four hours. You go to take a most needed shower and get dressed in your tactile suit again. 
+Oppenheimer closes off the lab and works on the machine for four hours. You go to take a most needed shower and get dressed in your tactical suit again. 
 
 Oppenheimer calls to you.
 
@@ -1017,14 +1017,14 @@ You get passed the stars, the planets, the galaxies, and eventually you get a bi
     
     = AI_Interaction_2
     * What's the location?
-     ** {ai_name}: Scanning...
+     ** <>{ai_name}: Scanning...
         {ai_name}: It likes we are in the 2040's.
         {ai_name}: The start of the Espionage era.
         {ai_name}: Location - unknown.
         {ai_name}: This place seems to be off the radar and not located in any databases.
         ->AI_Interaction_2
     * Any energy sources nearby?
-        ** {ai_name}: Yes, there a major energy signature inside this tunnel.
+        ** <>{ai_name}: Yes, there a major energy signature inside this tunnel.
            {ai_name}: I say we proceed with caution. Everything here seems to be of high echelon.
            -> AI_Interaction_2
     * [No more questions]
@@ -1178,11 +1178,11 @@ You move on to the computers to gain access to the security systems
  - else:
         Hey {ai_name}, I am connecting you to their security systems now.
         {ai_name}: Understood.
-        * {ai_name}: Passing by firewalls...
-        ** {ai_name}: Gained security access...
-        *** {ai_name}: Installing firmware...
-        ****{ai_name}: "Spider" installed into security systems...
-        *****{ai_name}: Access granted.
+        * <>{ai_name}: Passing by firewalls...
+        ** <>{ai_name}: Gained security access...
+        *** <>{ai_name}: Installing firmware...
+        **** <>{ai_name}: "Spider" installed into security systems...
+        ***** <>{ai_name}: Access granted.
         -> Access_Granted
         
  
@@ -1314,7 +1314,7 @@ You walk outside the security room and notice a Lab coat hanging by. You put the
  
  {ai_name}: They have lots of knives here I recommend you take some of those.
  * ["Takes suppressed weapons and knives"]
-  They have some smoke screens here. I'll should take some of those.
+  They have some smoke screens here. I should take some of those.
   ** ["Takes smoke screens"]
   Okay, I am ready. Let's go.
   -> Espionage_Side_Quest_3
@@ -1399,15 +1399,16 @@ You see a couple of more agents.
 
 * ["Use smoke screen"]
 
-You throw the smoke screen towards the agents. A big cloud of smoke covers them
+- You throw the smoke screen towards the agents. A big cloud of smoke covers them
 
 Agent 3: What the hell is going?
 
 Agent 5: I'm not sure "cough cough" I think we are under attack!
 
-*[Suppressed weapons]
- "pew" "pew" quick and clean.
-** [Throw Remaing Knives]
+*["Use suppressed weapons"]
+ "pew" "pew" 
+ Quick and clean.
+** [Throw Remaining Knives]
   Tangos down.
  
  - The smoke clears and not a single agent is left in sight. The best part about it is that you still have anonymity.
@@ -1425,7 +1426,7 @@ Agent 5: I'm not sure "cough cough" I think we are under attack!
         Agent 10: What happened to the lights?
         ** [Suppressed shot] Tango down.
         *** Where's Wolfgang? 
-        **** {ai_name}: Scanning...
+        **** <>{ai_name}: Scanning...
         {ai_name}: He's near Amelie!
         -> Wolfgang_confrontation
      }
@@ -1467,13 +1468,13 @@ Wolfgang: Take off the juggernaut suit too!
     Wolfgang: As an outstanding citizen of my own nation! I decided what the heck, let me so if we can help her back to normal and see what the hell is going on. She awakes from her beautiful unconscious state and tells me she's a scientist and that all you have been experimenting with teleportation! How neat is that!
     Wolfgang: Imagine what I could do with power of the God's like that? Just imagine...
     
-    * The Teleportation gates are still expertimental. We don't know what effects it will have in any given timeline.
+    * The teleportation gates are still expertimental. We don't know what effects it will have in any given timeline.
     - That's why we switched the design to just teleportation in real time instead.
     
     Wolfgang: No! I will not stand for that! Do you not understand the power you possess?
     Wolfgang: You can change history! You can destroy nations! You can form new ones! You can cure diseases and viruses!
     * Time is not for us to mess with, Wolfgang!
-    - Wolfgang: Oh, but you will! For me that is. You two are staying right here and building the gates right in this timeline.
+    - Wolfgang: Oh, but you will! For me that is. You two are staying right here and building the gates right in this lab.
     * Who are you? Why haven't I heard of you before. You have extreme wealth.
     - Wolfgang: Oh you don't know who I am? Well that's a surprise. I only literally have my own country.
      * No, the Espionage era ended in 2048 after the effects of global warming were rampant. Spies were no longer used.
@@ -1487,7 +1488,7 @@ Wolfgang: Take off the juggernaut suit too!
      
      {dropped_weapon && Quiet_approach:
      
-     *[Lie] Okay we will work for you. Just let go of her.
+     *["Lie"] Okay we will work for you. Just let go of her.
      -> The_Finesse
      
      - else:
@@ -1497,7 +1498,7 @@ Wolfgang: Take off the juggernaut suit too!
 = The_Finesse
 Wolfgang let's go of Amelie and returns to you.
 
-Wolfgang: Okay, great! I believe this is going to be an great partnership!
+Wolfgang: Okay, great! I believe this is going to be a great partnership!
 
  *["Drop last smokescreen"]
 - You drop the last smokescreen at your location and you Amelie run towards the pulsing light.
@@ -1547,7 +1548,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   BOOM!
   
-  The flames of the explosion engulfed Wolfgang and almost catches up to you and Amelie.
+  The flames of the explosion engulfed Wolfgang and it almost catches up to you and Amelie.
   
   You and Amelie see white and appear in space once again. There is no oxygen and the gates aren't teleporting you. Both you and Amelie are relying on the pulse of light. Both of your bodies are floating from a birds eye-view of the universe.
   
@@ -1557,7 +1558,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   *Amelie...
    **Amelie: Yes, my love...
-   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+   *** I just wanted to say... no matter what happens.. I'm glad I'm here with you overseeing two universes.
    **** Amelie: What do you mean?
    ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
    ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
@@ -1579,7 +1580,7 @@ Wolfgang:"cough" "cough" Where are you going?
             ***<> 3...
             ****<> 2...
             *****<> 1...
-        - as soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
+        - As soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
         
         Solomon: Jesus!
         
@@ -1619,7 +1620,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   *Amelie...
    **Amelie: Yes, my love...
-   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+    *** I just wanted to say... no matter what happens.. I'm glad I'm here with you overseeing two universes.
    **** Amelie: What do you mean?
    ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
    ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
@@ -1661,7 +1662,7 @@ Wolfgang:"cough" "cough" Where are you going?
   
   *Amelie...
    **Amelie: Yes, my love...
-   *** I just wanted to say... no matter what happens.. I'm glad I'm here together overseeing two universes.
+    *** I just wanted to say... no matter what happens.. I'm glad I'm here with you overseeing two universes.
    **** Amelie: What do you mean?
    ***** Well... we have the universe in front of us and I have you. You are my universe, Amelie...
    ****** Amelie: Funny... when I got sucked into the teleport... I knew you were going to find me... because if I am your universe, then you are all the suns within it.
@@ -1679,7 +1680,8 @@ Wolfgang:"cough" "cough" Where are you going?
             **<> 4...
             ***<> 3...
             ****<> 2...
-        - as soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
+            *****<> 1...
+        - As soon as {ai_name} says the next number you and Amelie get teleported back to the lab by some form of pulsing light.
         
         Solomon: Jesus!
         
@@ -1688,14 +1690,13 @@ Wolfgang:"cough" "cough" Where are you going?
   
   Solomon: Thank the God's you've made it back.
   
-  *Hey Solomon... good to be back.
+  * Hey Solomon... good to be back.
   - Amelie: Is that Solomon? Hi Solomon...
   
   Solomon: You both must be exhausted! I'm calling medical aid right now hold tight!
   
   I think we will be just fine just the way we are. Let's just lay here for a little while...
   
-  The next day, at the medical center they ran tests on your body and it looks like you have developed cancer from jumping through all the gates without proper protection. Your remaining days are spent researching making safe material and gadgets for teleportation, so that one else has to suffer your fate. Amelie is with you all the way to your deathbed several years later.   
+  The next day, at the medical center they ran tests on your body and it looks like you have developed cancer from jumping through all the gates without proper protection. Your remaining days are spent researching making safe material and gadgets for teleportation, so that one else has to suffer your fate. Amelie is stays with you all the way to your deathbed several years later.   
 
 -> END
-
