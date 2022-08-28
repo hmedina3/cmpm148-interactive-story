@@ -87,7 +87,8 @@ VAR coffee_flask = false
   **[Kiss Amelie]
   I love you. Let's finish these trials. -> The_Lab  
   **[French Kiss Amelie] 
-  Aren't you feeling a little excited today aha. ~ postive_state++ 
+  Aren't you feeling a little excited today aha. 
+  ~ postive_state++ 
   -> The_Lab
   
   
